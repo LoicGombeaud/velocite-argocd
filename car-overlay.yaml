@@ -12,7 +12,7 @@ spec:
     helm:
       valuesObject:
         ingress:
-          host: pdv-auto.velo-cite.org
+          host: pdv-auto.loicgombeaud.com
   destination:
     server: https://kubernetes.default.svc
     namespace: car-overlay
