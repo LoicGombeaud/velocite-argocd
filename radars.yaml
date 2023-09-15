@@ -12,7 +12,7 @@ spec:
     helm:
       valuesObject:
         ingress:
-          host: radars.velo-cite.org
+          host: radars.loicgombeaud.com
   destination:
     server: https://kubernetes.default.svc
     namespace: radars
