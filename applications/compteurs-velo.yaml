@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/LoicGombeaud/compteurs-velo.git
-    targetRevision: HEAD
+    targetRevision: feat/deploy
     path: deploy
     helm:
       valuesObject:
