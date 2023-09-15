@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: keel
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://charts.keel.sh
+    targetRevision: 1.0.2
+    chart: keel
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: keel
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
