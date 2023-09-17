@@ -4,4 +4,7 @@ Dépôt ArgoCD pour les applications Vélo-Cité
 
 ## TODO
 
-- trouver une solution pour le secret basic-auth
+- trouver une solution pour les secrets :
+  - keel / basic-auth
+  - car-overlay / basic-auth
+- backup automatisé
