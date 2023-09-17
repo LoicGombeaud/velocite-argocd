@@ -30,7 +30,7 @@ spec:
           tls:
             - hosts:
               - keel.loicgombeaud.com
-              secretName: keel
+              secretName: keel-tls
   destination:
     server: https://kubernetes.default.svc
     namespace: keel
