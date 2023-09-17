@@ -35,6 +35,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: keel
   syncPolicy:
-    automated: {}
+    automated:
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true

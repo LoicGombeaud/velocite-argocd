@@ -19,6 +19,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: compteurs-velo
   syncPolicy:
-    automated: {}
+    automated:
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
