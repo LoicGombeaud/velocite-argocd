@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: parking-saint-jean
+  name: parking-bordeaux-metropole
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/LoicGombeaud/parking-saint-jean.git
+    repoURL: https://github.com/LoicGombeaud/parking-bordeaux-metropole.git
     targetRevision: HEAD
     path: deploy
     helm:
@@ -17,7 +17,7 @@ spec:
           host: parking.loicgombeaud.com
   destination:
     server: https://kubernetes.default.svc
-    namespace: parking-saint-jean
+    namespace: parking-bordeaux-metropole
   syncPolicy:
     automated:
       selfHeal: true
