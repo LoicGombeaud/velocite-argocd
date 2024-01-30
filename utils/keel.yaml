@@ -24,12 +24,12 @@ spec:
             nginx.ingress.kubernetes.io/auth-type: basic
             nginx.ingress.kubernetes.io/auth-secret: basic-auth
           hosts:
-            - host: keel.loicgombeaud.com
+            - host: keel.velo-cite.org
               paths:
                 - /
           tls:
             - hosts:
-              - keel.loicgombeaud.com
+              - keel.velo-cite.org
               secretName: keel-tls
   destination:
     server: https://kubernetes.default.svc

@@ -15,7 +15,7 @@ spec:
     spec:
       ingressClassName: nginx
       rules:
-        - host: grafana.loicgombeaud.com
+        - host: grafana.velo-cite.org
           http:
             paths:
               - backend:
@@ -27,5 +27,5 @@ spec:
                 pathType: Prefix
       tls:
         - hosts:
-            - grafana.loicgombeaud.com
+            - grafana.velo-cite.org
           secretName: grafana-tls

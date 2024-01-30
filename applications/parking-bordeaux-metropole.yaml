@@ -11,10 +11,6 @@ spec:
     repoURL: https://github.com/LoicGombeaud/parking-bordeaux-metropole.git
     targetRevision: HEAD
     path: deploy
-    helm:
-      valuesObject:
-        ingress:
-          host: parking.loicgombeaud.com
   destination:
     server: https://kubernetes.default.svc
     namespace: parking-bordeaux-metropole
