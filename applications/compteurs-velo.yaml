@@ -11,10 +11,6 @@ spec:
     repoURL: https://github.com/LoicGombeaud/compteurs-velo.git
     targetRevision: feat/deploy
     path: deploy
-    helm:
-      valuesObject:
-        ingress:
-          host: compteurs-velo.loicgombeaud.com
   destination:
     server: https://kubernetes.default.svc
     namespace: compteurs-velo
