@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/LoicGombeaud/compteurs-velo.git
+    repoURL: https://github.com/velo-cite/compteurs-velo.git
     targetRevision: main
     path: deploy
   destination:
