@@ -8,8 +8,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/LoicGombeaud/voiesbordelaises.git
-    targetRevision: feat/deploy
+    repoURL: https://github.com/velo-cite/voiesbordelaises.git
+    targetRevision: main
     path: deploy
   destination:
     server: https://kubernetes.default.svc
