@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: compteurs-velo-dev
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/velo-cite/compteurs-velo.git
+    targetRevision: main
+    path: deploy
+    helm:
+      values: |
+        image:
+          tag: dev
+        ingress:
+          host: compteurs-dev.velo-cite.org
+          annotations:
+            nginx.ingress.kubernetes.io/auth-type: basic
+            nginx.ingress.kubernetes.io/auth-secret: basic-auth
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: compteurs-velo-dev
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
