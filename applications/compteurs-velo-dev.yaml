@@ -14,7 +14,7 @@ spec:
     helm:
       values: |
         image:
-          tag: dev
+          repository: ghcr.io/velo-cite/compteurs-velo-dev
         ingress:
           host: compteurs-dev.velo-cite.org
           annotations:
